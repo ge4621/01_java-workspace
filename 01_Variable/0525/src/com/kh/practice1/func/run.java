@@ -10,7 +10,10 @@ public class run {
 		//b.inputTest2();
 		
 		VariablePractice3 c = new VariablePractice3();
-		c.inputTest3();
+		//c.inputTest3();
+		
+		VariablePractice4 d = new VariablePractice4();
+		d.inputTest4();
 	}
 
 }

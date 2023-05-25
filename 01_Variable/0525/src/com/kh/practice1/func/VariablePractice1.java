@@ -22,7 +22,7 @@ public class VariablePractice1 {
 		
 		System.out.println("키" + heigth + "cm 인" + age+"살" + gender+"자" + name + "님 반갑습니다.^^");
 		
-		
+		sc.close();
 	}
 	
 	

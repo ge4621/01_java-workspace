@@ -8,14 +8,14 @@ public class VariablePractice3 {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("가로 : ");
-		int a = sc.nextInt();
+		double a = sc.nextDouble();
 		
 		System.out.print("세로 : ");
-		int b = sc.nextInt();
+		double b = sc.nextDouble();
 		
-		System.out.print("면적 : "+ (a*b));
-		System.out.print("둘레 : " + (a+b)*2);
-		
+		System.out.println("면적 : "+ (a*b));
+		System.out.println("둘레 : " + (a+b)*2);
+		sc.close();
 	}
 	
 }

@@ -13,7 +13,7 @@ public class run {
 		//c.inputTest3();
 		
 		VariablePractice4 d = new VariablePractice4();
-		d.inputTest4();
+		d.charTest();
 	}
 
 }

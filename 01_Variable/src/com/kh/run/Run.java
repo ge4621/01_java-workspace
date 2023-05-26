@@ -15,8 +15,8 @@ public class Run {
 		//b.inputTest1();
 		//b.inputTest2();
 		//b.inputTest3();
-		b.inputTest4();
-		
+		//b.inputTest4();
+		b.chartTest();
 		
 	}
 	

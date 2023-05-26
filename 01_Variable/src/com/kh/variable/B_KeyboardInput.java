@@ -113,9 +113,19 @@ public class B_KeyboardInput {
 			
 		}
 		
-		public void chartTest();
+		public void chartTest(){
 		
 			String str = "Hello";
+			
+			//변수에 기록하여 추력하는 방식
+			char ch =str.charAt(0);  //H
+			System.out.println(ch);
+			
+			//바로 출력하는 방식
+			System.out.println(str.charAt(4));
+			
+			}
+			
 			
 		
 		
@@ -123,7 +133,9 @@ public class B_KeyboardInput {
 		
 		
 		//존재하지 않는 인덱스 : 오류발생!!!
-		//System.out.println(str.charAt(12)); //java.lang.stringIdexOu
+		//System.out.println(str.charAt(12)); //java.lang.stringIdexOutOfBoundsException
+
+		//System.out.println(str.charAt(12));
 		
 		/*정리**
 		 * 1.콘솔창에 (모니터) 출력하기 위해 : System.out.println[ln]() 메소드 이용

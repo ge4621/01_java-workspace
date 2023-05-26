@@ -69,11 +69,12 @@ public class B_KeyboardInput {
 			String address = sc.nextLine();
 			
 			System.out.print("키 : ");
-			double height = sc.nextDouble();
+			double height = sc.nextDouble(); //실수형으로 사용
 			
 			//XX님은 XX살이며, 사는 곳은 XXX이고, 키는 XXX.Xcm입니다.
 			System.out.println(name + "님은" + age +"살이며, 사는 곳은" + address + "이고, 키는" + height +"cm입니다.");
 			
+			System.out.printf("%s님은 %d살이며, 사는 곳은 %s이고, 키는 %.1fcm입니다.",name,age,address,height);  //키는 실수형으로 사용했기 때문에 %f사용
 			
 		}
 		
@@ -117,7 +118,7 @@ public class B_KeyboardInput {
 		
 			String str = "Hello";
 			
-			//변수에 기록하여 추력하는 방식
+			//변수에 기록하여 출력하는 방식
 			char ch =str.charAt(0);  //H
 			System.out.println(ch);
 			

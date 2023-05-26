@@ -2,6 +2,8 @@ package com.kh.run;
 
 import com.kh.variable.A_Variable;
 import com.kh.variable.B_KeyboardInput;
+import com.kh.variable.C_Printf;
+import com.kh.variable.D_Cast;
 
 public class Run {
 	public static void main(String[] args) {
@@ -16,8 +18,14 @@ public class Run {
 		//b.inputTest2();
 		//b.inputTest3();
 		//b.inputTest4();
-		b.chartTest();
+		//b.chartTest();
 		
-	}
+		C_Printf c = new C_Printf();
+		//c.printfTest();
+		
+		D_Cast d = new D_Cast();
+		//d.autoCasting();
+		d.forceCasting();
+	} 
 	
 }

@@ -174,14 +174,17 @@ public class OperatorPractice {
 		int num3 = sc.nextInt();
 		
 		double resultA = (num1*0.4) + num1;
+		System.out.println("A사원 연봉/연봉+a : " + num1 + "/" +resultA );
 		String result = resultA >=3000? "3000이상" : "3000미만";
 		System.out.println(result);
 		
 		double resultB = (num1*0) + num2;
+		System.out.println("B사원 연봉/연봉+a : " + num2 + "/" +resultB);
 		String result2 = resultB >=3000? "3000이상" : "3000미만";
 		System.out.println(result2);
 		
 		double resultC = (num1*0.15) + num3;
+		System.out.println("C사원 연봉/연봉+a : " + num3 + "/" +resultC );
 		String result3 = resultC >=3000? "3000이상" : "3000미만";
 		System.out.println(result3);
 		

@@ -111,7 +111,7 @@ public class LoopPractice {
 			}
 
 		}
-
+sc.close();
 	}
 
 	public void practice7() {
@@ -141,6 +141,7 @@ public class LoopPractice {
 
 			}
 		}
+		sc.close();
 
 	}
 
@@ -155,6 +156,7 @@ public class LoopPractice {
 		for (int i = 1; i <= 9; i++) {
 			System.out.printf("%d x %d = %d\n", dan, i, dan * i);
 		}
+		sc.close();
 	}
 
 	public void practice9() {
@@ -217,7 +219,7 @@ public class LoopPractice {
 					System.out.print(i + " ");
 				}
 		}
-		
+		sc.close();
 
 	}
 
@@ -268,6 +270,7 @@ public class LoopPractice {
 			}
 			break;
 		}
+		sc.close();
 	}
 
 	public void practice13() {

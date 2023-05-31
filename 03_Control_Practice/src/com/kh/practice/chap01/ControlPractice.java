@@ -27,6 +27,7 @@ public class ControlPractice {
 		}else if(num == 7) {
 			System.out.println("프로그램을 종류합니다.");
 		}
+		sc.close();
 	}
 	public void practice2() {
 		Scanner sc = new Scanner(System.in);
@@ -41,6 +42,7 @@ public class ControlPractice {
 		}else if(num <0){
 			System.out.println("양수만 입력해주세요");
 		}
+		sc.close();
 	}
 	public void practice3() {
 		Scanner sc = new Scanner(System.in);
@@ -65,6 +67,7 @@ public class ControlPractice {
 		}else {
 			System.out.println("불합격입니다.");
 		}
+		sc.close();
 	}
 	public void practice4() {
 		Scanner sc = new Scanner(System.in);
@@ -96,6 +99,7 @@ public class ControlPractice {
 			System.out.println(num + "월은 잘못 입력된 달 입니다.");
 		
 		}
+		sc.close();
 	}
 	public void practice5() {
 		Scanner sc = new Scanner(System.in);
@@ -115,6 +119,7 @@ public class ControlPractice {
 		}else{
 				System.out.println("아이디가 틀렸습니다.");
 		}
+		sc.close();
 		
 	}
 	public void practice6() {
@@ -134,6 +139,7 @@ public class ControlPractice {
 			System.out.print("게시글 조회 ");
 			
 		}
+		sc.close();
 	}
 	public void practice7() {
 		Scanner sc = new Scanner(System.in);
@@ -161,6 +167,7 @@ public class ControlPractice {
 			System.out.println("고도비만");
 			
 		}
+		sc.close();
 				
 	}
 	public void practice8() {
@@ -187,7 +194,7 @@ public class ControlPractice {
 			System.out.printf("%d %% %d =%d\n " ,num1,num2,num1+num2);
 		}
 		
-		
+		sc.close();
 		
 		
 		
@@ -204,29 +211,35 @@ public class ControlPractice {
 		System.out.print("출석 회수 : ");
 		double d = sc.nextDouble();
 		
-		System.out.println("========결과=======");
 		double sum = (a*0.2) + (b*0.3) + (c*0.3) + d;
 		double at = a * 0.2;
 		double bt = b * 0.3;
 		double ct = c * 0.3;
 		double dt = d;
-				
-		System.out.println("중간 고사 점수 (20) : " + at );
-		System.out.println("기말 고사 점수 (30) : " + bt );
-		System.out.println("과제 점수     (30) : " + ct );
-		System.out.println("출석 점수     (20) : " + d );
-		System.out.println("총점 : " + sum);
+		
 		
 		
 		
 		if(d < 20*0.7) {
 			System.out.printf("Fail[출석 회수 부족 (%d/20)]",(int)dt);
 		}else if(sum>=70) {
+			System.out.println("========결과=======");
+			System.out.println("중간 고사 점수 (20) : " + at );
+			System.out.println("기말 고사 점수 (30) : " + bt );
+			System.out.println("과제 점수     (30) : " + ct );
+			System.out.println("출석 점수     (20) : " + d );
+			System.out.println("총점 : " + sum);
 			System.out.println("Pass");
 		}else if(sum<70) {
+			System.out.println("========결과=======");
+			System.out.println("중간 고사 점수 (20) : " + at );
+			System.out.println("기말 고사 점수 (30) : " + bt );
+			System.out.println("과제 점수     (30) : " + ct );
+			System.out.println("출석 점수     (20) : " + d );
+			System.out.println("총점 : " + sum);
 			System.out.println("Fail[점수미달]");
 		}
-
+		sc.close();
 		
 	}
 	public void practice10() {
@@ -277,6 +290,6 @@ public class ControlPractice {
 			break;
 		
 		}
-		
+		sc.close();
 	}
 }

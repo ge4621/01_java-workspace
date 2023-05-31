@@ -29,7 +29,7 @@ public class E_Logical {
 		
 		//&& : 두개의 조건 모두가 true여야 && 연산의 결과값이 최종적으로 true
 		// 둘 중에 하나라도 false가 있을 경우 && 연산의 결과값으 false
-		
+		sc.close();
 	}
 	public void method2() {
 		//사용자가 입려한 문자값이 영어 대문자인지 확인
@@ -49,7 +49,7 @@ public class E_Logical {
 		//두번째 방법
 		boolean result = (ch >= 'A') && (ch <= 'Z');
 		System.out.println("사용자가 입력한 값이 대문자입니까 ? " + result);
-		
+		sc.close();
 	}
 	public void method3() {
 		//사용자에게 성별을 입력 받은 후 여자인지 확인
@@ -64,7 +64,7 @@ public class E_Logical {
 		
 		// || : 두개의 조건 중 하나라도 true가 있다며 ||연산의 결과값은 true
 		//		두개의 조건이 모두 false || 연산의 결과값이 false
-		
+		sc.close();
 	}
 	public void method4() {
 		//사용자에게 입력을 받아 게임을 종료하는 프로그램
@@ -97,6 +97,7 @@ public class E_Logical {
 	 * **||연산자를 기준으로 앞의 결과가 true일 경우 뒤의 조건 굳이 실행하지 않는다.!!!
 	 * 
 	 */
+		sc.close();
 	}
 	
 	public void method5() {

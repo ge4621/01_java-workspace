@@ -35,7 +35,7 @@ public class G_Triple {
 		//System.out.println(result);  //기초적인 방법
 		
 		System.out.println(num + "은(는) " + ((num > 0)? "양수입니다." : "음수입니다."));
-		
+		sc.close();
 	}
 	
 	public void method2() {
@@ -51,7 +51,7 @@ public class G_Triple {
 		//String result = num % 2 ==1? "홀수이다." : "짝수이다";
 		
 		System.out.println(result);
-		
+		sc.close();
 	}
 	public void method3() {
 		//사용자에게 종류여부를 입력 받아 판별해서 출력
@@ -62,6 +62,7 @@ public class G_Triple {
 		
 		String result = (ch == 'y' || ch == 'Y') ? "프로그램을 종류합니다.": "계속진행하겠습니다.";
 		System.out.println(result);
+		sc.close();
 	}
 	public void method() {
 		//영문자 입력받아서, 영어 소문자인지 아닌지 판별 후 출력
@@ -75,7 +76,7 @@ public class G_Triple {
 		String result = (ch >= 'a') && (ch<='z')?"소문자 입니다.":"대문자입니다.";
 		
 		System.out.println("입력한 문자는 " + result);
-		
+		sc.close();
 	}
 	public void method5() {
 		//양수(+5), 음수(-5), 0(0)
@@ -87,7 +88,7 @@ public class G_Triple {
 		
 		String result = (num >0)? "양수입니다." :((num ==0)?"0입니다." : "음수 입니다.");  
 		System.out.println(result);
-		
+		sc.close();
 	}
 	public void method6() {
 		//사용자에게 두개의 정수를 입력 받고
@@ -109,7 +110,7 @@ public class G_Triple {
 		
 		String result = (op == '+')? (num1 + num2+""):((op == '-')?(num1 - num2+""):"잘못 입력했습니다.");
 		System.out.println("결과 : " +result);
-		
+		sc.close();
 	}
 	
 }

@@ -132,21 +132,27 @@ public class A_For {
 			
 			//사용자에게 값을 입력 받아 1부터 입력받은 수까지의 합계 출력
 			Scanner sc = new Scanner(System.in);
-			System.out.print("1이상의 정수를 입력하시오 : ");
-			int num = sc.nextInt();
-			if (num > 0) {
-				//누적합
-				//1.sum 변수 만들기
-				int sum = 0;
-				//2. for문 돌리기
-				for(int i = 1;i <= num;i++) {
-					//누적합 공식
-					sum +=1;
+			
+			while(true) {
+				System.out.print("1이상의 정수를 입력하시오 : ");
+				int num = sc.nextInt();
+				if (num > 0) {
+					//누적합
+					//1.sum 변수 만들기
+					int sum = 0;
+					//2. for문 돌리기
+					for(int i = 1;i <= num;i++) {
+						//누적합 공식
+						sum +=1;
+					}
+					System.out.println("1부터" + num + "까지의 합 : " + sum);
+					break;
+				}else {
+					System.out.println("잘못입력했습니다.다시 입력해주세요");
 				}
-				System.out.println("1부터" + num + "까지의 합 : " + sum);
-			}else {
-				System.out.println("잘못입력했습니다.");
 			}
+			
+			//sc.close();
 		}
 		public void method8() {
 			//1에서 부터 어떤 랜덤값(1~10 사이의 랜덤값)까지의 총 합계
@@ -178,6 +184,7 @@ public class A_For {
 			}
 			//1부터 random 까지의 합계
 			System.out.println("1부터"+random+ "까지의 합계 :" + sum);
+			
 		}
 		public void method9() {
 			String str = "Hello";
@@ -218,7 +225,7 @@ public class A_For {
 			for(int i = 0; i<=str.length()-1;i++) {
 				System.out.println(str.charAt(i));
 			}
-			
+			sc.close();
 		}
 		public void method11() {
 			// 구구단 출력
@@ -250,6 +257,7 @@ public class A_For {
 			}else {
 				System.out.println("잘못입력");
 			}
+			sc.close();
 		
 		//사용자에게 단을 입력 받아 구구단 출력
 		//int dan;

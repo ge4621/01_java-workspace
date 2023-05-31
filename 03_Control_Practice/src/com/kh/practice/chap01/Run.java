@@ -12,7 +12,7 @@ public static void main(String[] agrs) {
 	//a.practice6();
 	//a.practice7();
 	//a.practice8(); 
-	a.practice9(); //조건문
+	//a.practice9(); //조건문
 	//a.practice10();
 	
 	

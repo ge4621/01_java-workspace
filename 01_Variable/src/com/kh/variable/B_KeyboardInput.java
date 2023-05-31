@@ -50,7 +50,7 @@ public class B_KeyboardInput {
 			
 			//XX님은 XX살이며, 키는 XXX.Xcm 입니다.
 			System.out.println(name + "님은 " + age +"살이며, 키는"+ height +"cm 입니다.");
-			
+			sc.close();
 	}
 		//키보드로 값을 입력 받을 때 종종 발생되는 문제
 		public void inputTest3() {
@@ -75,7 +75,7 @@ public class B_KeyboardInput {
 			System.out.println(name + "님은" + age +"살이며, 사는 곳은" + address + "이고, 키는" + height +"cm입니다.");
 			
 			System.out.printf("%s님은 %d살이며, 사는 곳은 %s이고, 키는 %.1fcm입니다.",name,age,address,height);  //키는 실수형으로 사용했기 때문에 %f사용
-			
+			sc.close();
 		}
 		
 		public void inputTest4() {
@@ -111,7 +111,7 @@ public class B_KeyboardInput {
 			System.out.println("성별 : " + gender);
 			System.out.println("나이 : " + age);
 			System.out.println("키 : " + heigth);
-			
+			sc.close();
 		}
 		
 		public void chartTest(){

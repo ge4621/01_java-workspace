@@ -55,7 +55,7 @@ public class D_Comparison {
 		System.out.println(num2 < 'A'); // 자동형변환
 		//'A'~'Z' : 65~90
 		
-		
+		sc.close();
 		
 	}
 }

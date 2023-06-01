@@ -44,7 +44,7 @@ public class B_Continue {
 		
 		System.out.println("1부터 100까지의 합계 : " + sum);
 	}
-	public void method3() {
+	public void method3() { 
 		//2~9단까지 출력
 		//단, 3의 배수단을 빼고 출력
 		

@@ -55,6 +55,19 @@ public class CompExample {
 		String str = sc.nextLine();
 		System.out.print("문자 : ");
 		char ch = sc.nextLine().charAt(0);
+
+		int count = 0;
+
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) == ch) {
+				count++;
+			}
+		}
+		System.out.println(str + "안에 포함된" + ch + "개수 : " + count);
+		sc.close();
+	}
+
+	public void practice4() {
 		
 		
 	}

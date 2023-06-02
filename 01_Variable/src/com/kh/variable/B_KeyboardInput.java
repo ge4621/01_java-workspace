@@ -136,7 +136,7 @@ public class B_KeyboardInput {
 		//존재하지 않는 인덱스 : 오류발생!!!
 		//System.out.println(str.charAt(12)); //java.lang.stringIdexOutOfBoundsException
 
-		//System.out.println(str.charAt(12));
+		
 		
 		/*정리**
 		 * 1.콘솔창에 (모니터) 출력하기 위해 : System.out.println[ln]() 메소드 이용

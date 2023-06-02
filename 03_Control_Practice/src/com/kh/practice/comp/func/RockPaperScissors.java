@@ -7,17 +7,17 @@ public class RockPaperScissors {
 		
 		//가위 => 1, 바위 => 2, 보 =>3
 		Scanner sc = new Scanner(System.in);
-		int 가위 = 1;
-		int 바위 = 2;
-		int 보= 3;
 		
 		while(true) {
+			int 가위 = 1;
+			int 바위 = 2;
+			int 보= 3;
 			System.out.print("당신의 이름을 입력해주세요: ");
 			String name = sc.nextLine();
+			int com =(int)(Math.random()*3+1);  //컴퓨터 랜덤
 			System.out.print("가위바위보 : ");
 			String srp2 = sc.nextLine();
 			int srp = sc.nextInt();
-			int com =(int)(Math.random()*3+1);  //컴퓨터 랜덤
 			
 			switch(com) {
 			case 1:

@@ -114,226 +114,221 @@ public class A_Array {
 		for (int i = 0; i <= 3; i++) {
 			System.out.println(dArr[i]);
 		}
-		
-		//내가 각 인덱스에 초기화(값대입)를 하지 않아도 값들이 담겨있음!왜일까?
-		//Heap이라는 공간에 절대 빈공간이 존재할 수 없다.!!!
-		//=> 따라서 공간이 만들어질때 JVM(자바가상머신)이 기본적으로 초기화(값대입)를 진행해줌
+
+		// 내가 각 인덱스에 초기화(값대입)를 하지 않아도 값들이 담겨있음!왜일까?
+		// Heap이라는 공간에 절대 빈공간이 존재할 수 없다.!!!
+		// => 따라서 공간이 만들어질때 JVM(자바가상머신)이 기본적으로 초기화(값대입)를 진행해줌
 	}
+
 	public void method4() {
-		int[] arr =new int[10];
-		
+		int[] arr = new int[10];
+
 		/*
-		arr[0] = 1;
-		arr[1] = 2;
-		arr[2] = 3;
-		arr[3] = 4;
-		arr[4] = 5;
-		*/
-		for(int i = 0; i <= 4;i++) {
-			arr[i] = i+1;
+		 * arr[0] = 1; arr[1] = 2; arr[2] = 3; arr[3] = 4; arr[4] = 5;
+		 */
+		for (int i = 0; i <= 4; i++) {
+			arr[i] = i + 1;
 		}
-		//값출력
-		for(int i = 0; i<arr.length; i++) {
+		// 값출력
+		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
 		}
-		System.out.println(arr); //배열의 자료형+@+주소값의 16진수 형태
-		System.out.println(arr.hashCode());//주소값의 10진수 형태
-		
+		System.out.println(arr); // 배열의 자료형+@+주소값의 16진수 형태
+		System.out.println(arr.hashCode());// 주소값의 10진수 형태
+
 		System.out.println("배열의 길이 : " + arr.length);
-		
-		//배열 크기 변경요청 => 10으로 => 안됨, 다시 만들어야 한다.
-		
+
+		// 배열 크기 변경요청 => 10으로 => 안됨, 다시 만들어야 한다.
+
 	}
+
 	public void method5() {
-		int result = 0; //선언과 동시에 초기화
-		
-		//배열 쓰면서 볼 수 있는 오류들 모음
-		//int[] arr;// 크기지정 까먹은 경우
-		
-		int[] arr = null; //아무것도 참조하고 있지 않다.
-		
-		System.out.println(arr);//선언만 한 경우 => 초기화 안되어 있어서 오류발생
-		
-		//null 가지고 메소드 호출한다거나 특정 어딘가에 접근하고자 한다면 항상오류 발생!!!=>NullPointerException
-		//System.out.println(arr.hashCode());
-		//System.out.println(arr.length);
-		//System.out.println(arr[0]);
-		
+		int result = 0; // 선언과 동시에 초기화
+
+		// 배열 쓰면서 볼 수 있는 오류들 모음
+		// int[] arr;// 크기지정 까먹은 경우
+
+		int[] arr = null; // 아무것도 참조하고 있지 않다.
+
+		System.out.println(arr);// 선언만 한 경우 => 초기화 안되어 있어서 오류발생
+
+		// null 가지고 메소드 호출한다거나 특정 어딘가에 접근하고자 한다면 항상오류 발생!!!=>NullPointerException
+		// System.out.println(arr.hashCode());
+		// System.out.println(arr.length);
+		// System.out.println(arr[0]);
+
 	}
+
 	public void method6() {
 		int[] arr = new int[5];
 		/*
-		arr[0] = 2;  2*1
-		arr[1] = 4;  2*2
-		arr[2] = 6;  2*3
-		arr[3] = 8;  2*4
-		arr[4] = 10; 2*5
-		*/
+		 * arr[0] = 2; 2*1 arr[1] = 4; 2*2 arr[2] = 6; 2*3 arr[3] = 8; 2*4 arr[4] = 10;
+		 * 2*5
+		 */
 		/*
-		for(int i = 0; i<arr.length ; i++) {
-			arr[i] = 2*(i+1);
-		}
-		*/
+		 * for(int i = 0; i<arr.length ; i++) { arr[i] = 2*(i+1); }
+		 */
 		int value = 2;
-		for(int i =0; i<arr.length;i++) {
-			arr[i]=value;
-			value +=2;
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = value;
+			value += 2;
 		}
-		for(int i = 0; i<arr.length;i++) {
+		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
 		}
-		System.out.println("arr의 해쉬코드값 : "+arr.hashCode());
-		System.out.println("arr의 길이 : "+ arr.length);
-		
-		//ArrayIndexOutOfBoundsException :배열에 부적절한 인덱스 제시시 발생(범위에서 벗어난 인덱스 제시)
-		//arr[5] =12;
-		
-		//*배열의 가장 큰 단점
+		System.out.println("arr의 해쉬코드값 : " + arr.hashCode());
+		System.out.println("arr의 길이 : " + arr.length);
+
+		// ArrayIndexOutOfBoundsException :배열에 부적절한 인덱스 제시시 발생(범위에서 벗어난 인덱스 제시)
+		// arr[5] =12;
+
+		// *배열의 가장 큰 단점
 		// -한번 지정된 배열의 크기는 변경이 불가
-		//=>배열의 크기를 변경하고자 한다면 다시 만들어야 됨
+		// =>배열의 크기를 변경하고자 한다면 다시 만들어야 됨
 		arr = new int[7];
-		System.out.println("변경 후의 arr의 해쉬코드 값 : "+arr.hashCode());
-		System.out.println("변경 후의 arr의 길이 : "+ arr.length);
-		//주소값이 변경됨!!!=>새로운곳 참조하고 있음
-		
-		/* 
-		 * 연결이 끊어진 기존 배열은 Heap영역에 둥둥떠다님(어디에서 참조되어 있지 않으므로 필요 없는 존재임 ==지워주는게 좋음)
-		 * => 일정시간이 지나면 "가비지컬렉터(GC)"가 알아서 지워줌!!
-		 * => 자바에서의 "자동메모리 관리"특징!!! ==개발자가 코드작성에만 신경쓸 수 있음
+		System.out.println("변경 후의 arr의 해쉬코드 값 : " + arr.hashCode());
+		System.out.println("변경 후의 arr의 길이 : " + arr.length);
+		// 주소값이 변경됨!!!=>새로운곳 참조하고 있음
+
+		/*
+		 * 연결이 끊어진 기존 배열은 Heap영역에 둥둥떠다님(어디에서 참조되어 있지 않으므로 필요 없는 존재임 ==지워주는게 좋음) => 일정시간이
+		 * 지나면 "가비지컬렉터(GC)"가 알아서 지워줌!! => 자바에서의 "자동메모리 관리"특징!!! ==개발자가 코드작성에만 신경쓸 수 있음
 		 */
 
-		//배열을 강제로 삭제시키고자 한다면 ?? ==>연결고리를 끊으면 됨!!
-		arr = null; //아무것도 참조하지 않는다.!
-		
-		System.out.println("삭제 후 arr : " + arr); //null
-		
-		//null.xxxx() ==> // NullpointerException발생
-		
- 	}
+		// 배열을 강제로 삭제시키고자 한다면 ?? ==>연결고리를 끊으면 됨!!
+		arr = null; // 아무것도 참조하지 않는다.!
+
+		System.out.println("삭제 후 arr : " + arr); // null
+
+		// null.xxxx() ==> // NullpointerException발생
+
+	}
+
 	public void method7() {
-		//배열 선언, 할당, 초기화(값대입) 다 동시에 하기
-		
-		//[표현법1]
-		int[] arr1 = new int[] {1, 2, 3, 4};
-		
-		//[표현법2]****
-		int[] arr2 = {1, 2 ,3 ,4};
-		
-		System.out.println("arr1이랑 arr2가 같나요? : " + (arr1 == arr2)); //false
-		//각각의 변수에 담겨있는 주소값을 비교하기 때문에
+		// 배열 선언, 할당, 초기화(값대입) 다 동시에 하기
+
+		// [표현법1]
+		int[] arr1 = new int[] { 1, 2, 3, 4 };
+
+		// [표현법2]****
+		int[] arr2 = { 1, 2, 3, 4 };
+
+		System.out.println("arr1이랑 arr2가 같나요? : " + (arr1 == arr2)); // false
+		// 각각의 변수에 담겨있는 주소값을 비교하기 때문에
 		System.out.println("arr1이랑 arr2가 같나요? : " + (arr1[0] == arr2[0]));
-		
+
 	}
+
 	public void method8() {
-		//1.크기 10짜리 정수 배열 생성 후
-		//2.반복문을 활용해서 0번 인덱스 ~ 마지막 인덱스까지 순차적으로 접근하면서 값 대입
-		//  매번 1~100사이에 생성된는 랜덤값
-		
-		//3.반복문을 활용해서 해당 배열의 0번 인덱스 ~ 마지막 인덱스가지 담겨있는 값 출력
-		//arr[x] : xx형식으로 출력
-		
-		int[] arr = new int [10];   
-		for(int i = 0 ; i<arr.length; i++) {
-			arr[i] =(int)(Math.random()*100+1);
+		// 1.크기 10짜리 정수 배열 생성 후
+		// 2.반복문을 활용해서 0번 인덱스 ~ 마지막 인덱스까지 순차적으로 접근하면서 값 대입
+		// 매번 1~100사이에 생성된는 랜덤값
+
+		// 3.반복문을 활용해서 해당 배열의 0번 인덱스 ~ 마지막 인덱스가지 담겨있는 값 출력
+		// arr[x] : xx형식으로 출력
+
+		int[] arr = new int[10];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 100 + 1);
 		}
-		for(int i = 0 ; i<10;i++) {
-			System.out.println("arr["+i+"] : " + arr[i]);
-			
+		for (int i = 0; i < 10; i++) {
+			System.out.println("arr[" + i + "] : " + arr[i]);
+
 		}
-		
+
 	}
+
 	public void method9() {
-		//1. 사용자에게 배열의 길이를 입력을 받은 후
-		// 	해당 그 크기만큼의 문자열 배열 생성
+		// 1. 사용자에게 배열의 길이를 입력을 받은 후
+		// 해당 그 크기만큼의 문자열 배열 생성
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.print("배열의 길이 : ");
 		int size = sc.nextInt();
-		sc.nextLine();//버퍼에 남아 있는 엔터를 제거해줄수 있는 코드 추가
-		
+		sc.nextLine();// 버퍼에 남아 있는 엔터를 제거해줄수 있는 코드 추가
+
 		String[] arr = new String[size];
-		//2.반복문 활용해서 매번 사용자에게 과일명 입력 받아
+		// 2.반복문 활용해서 매번 사용자에게 과일명 입력 받아
 		// 그 값을 매 인덱스 자리에 대입(0번 ~ 마지만 인덱스)
-		for(int i = 0; i<arr.length;i++) {
+		for (int i = 0; i < arr.length; i++) {
 			System.out.print("좋아하는 과일명 입력 : ");
-			arr[i]=sc.nextLine();
+			arr[i] = sc.nextLine();
 		}
-		//3. 반복문 활용해서 0~ 마지막 인덱스까지 담긴 값을 출력
-		for(int i = 0; i<arr.length;i++) {
+		// 3. 반복문 활용해서 0~ 마지막 인덱스까지 담긴 값을 출력
+		for (int i = 0; i < arr.length; i++) {
 			System.out.println("arr[" + i + "] : " + arr[i]);
 		}
+		sc.close();
 	}
+
 	public void method10() {
-		//사용자에게 문자열 하나 입력받은 후
-		//각각의 인덱스에 있는 문자들은 char배열에 옮겨닮기
-		
-		//1. 사용자에게문자열 입력받기
+		// 사용자에게 문자열 하나 입력받은 후
+		// 각각의 인덱스에 있는 문자들은 char배열에 옮겨닮기
+
+		// 1. 사용자에게문자열 입력받기
 		Scanner sc = new Scanner(System.in);
 		System.out.print("문자열 입력 : ");
 		String str = sc.nextLine();
-		
+
 		System.out.print("찾고자 하는 문자 : ");
 		char ch = sc.nextLine().charAt(0);
-		
-		
-		//2.char배열 생성(크기지정!!!=> 이때 배열의 크기? => 문자열의 길이 만큼)
+
+		// 2.char배열 생성(크기지정!!!=> 이때 배열의 크기? => 문자열의 길이 만큼)
 		char[] arr = new char[str.length()];
-		
-		//3.반복문 활용해서 해당 문자열에서 각 인덱스별 문자를 char배역의 각 인덱스 대입
+
+		// 3.반복문 활용해서 해당 문자열에서 각 인덱스별 문자를 char배역의 각 인덱스 대입
 		/*
-		arr[0] = str.charAt(0);//k
-		arr[1] = str.charAt(1);//i
-		arr[2] = str.charAt(2);//w
-		arr[3] = str.charAt(3);//i
-		......
-		arr[마지막] = str.charAt(마지막);
-		*/
-		
-		for(int i = 0; i <arr.length;i++) {
+		 * arr[0] = str.charAt(0);//k arr[1] = str.charAt(1);//i arr[2] =
+		 * str.charAt(2);//w arr[3] = str.charAt(3);//i ...... arr[마지막] =
+		 * str.charAt(마지막);
+		 */
+
+		for (int i = 0; i < arr.length; i++) {
 			arr[i] = str.charAt(i);
 		}
-		
-		//4.char 배열 출력
-		int count  = 0; //일치하는 문자가 존재할 경우 매번 1씩 증가
-		
-		for(int i = 0; i <arr.length;i++) {
-			System.out.println("arr["+i+ "] : "+arr[i] );;
-			
-			if(ch == arr[i]) {//찾으려하는 문자와 배열의 값이 같을 경우
+
+		// 4.char 배열 출력
+		int count = 0; // 일치하는 문자가 존재할 경우 매번 1씩 증가
+
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println("arr[" + i + "] : " + arr[i]);
+			;
+
+			if (ch == arr[i]) {// 찾으려하는 문자와 배열의 값이 같을 경우
 				count++;
-				
+
 			}
 		}
 		System.out.println("찾아진 문자 개수 : " + count);
+		sc.close();
 	}
+
 	public void method11() {
-		//1.사용자에게 배열의 길이  입력받은 후 해당 크기만큼의 정수 배결 생성
+		// 1.사용자에게 배열의 길이 입력받은 후 해당 크기만큼의 정수 배결 생성
 		Scanner sc = new Scanner(System.in);
 		System.out.print("배열의 길이 입력 : ");
 		int size = sc.nextInt();
-		
+
 		int[] arr = new int[size];
-		
-		//2.반복문 활용해서 0~마지막 인덱스까지 매번 1~100사이의 랜덤값 발생시켜 대입
-		for(int i = 0; i<arr.length; i++) {
-			arr[i] =(int)(Math.random()*100+1);
+
+		// 2.반복문 활용해서 0~마지막 인덱스까지 매번 1~100사이의 랜덤값 발생시켜 대입
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 100 + 1);
 		}
-		
-		//3.반복문 활용해서 0~마지막 인덱스까지 담긴 값을 출력과 동시에 해당 그 인덱스에 담긴 값이 짝수인것들의 총합(누적합)구하자
+
+		// 3.반복문 활용해서 0~마지막 인덱스까지 담긴 값을 출력과 동시에 해당 그 인덱스에 담긴 값이 짝수인것들의 총합(누적합)구하자
 		int sum = 0;
-		
-		for(int i = 0; i<arr.length; i++) {
-			System.out.println("arr["+i+"] : " + arr[i]);
-			
-			//짝수인지 판별 => 누적합
-			if(arr[i] % 2 == 0) {//짝수
-				sum +=arr[i]; //누적합 공식
+
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println("arr[" + i + "] : " + arr[i]);
+
+			// 짝수인지 판별 => 누적합
+			if (arr[i] % 2 == 0) {// 짝수
+				sum += arr[i]; // 누적합 공식
 			}
 		}
 		System.out.println("해당 배열의 짝수의 총합 : " + sum);
-		
-		
-		
-		
+		sc.close();
 	}
+
 }

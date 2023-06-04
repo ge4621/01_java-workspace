@@ -73,32 +73,9 @@ public class ArrayPractice {
 			}
 		}
 			System.out.println(ch + "개수 : " + count);
-		}
+			sc.close();
+	}
 
-	/*public void practice5() {
-		Scanner sc = new Scanner(System.in);
-		System.out.print("문자열 : ");
-		String str = sc.nextLine();
-		System.out.print("문자 : ");
-		char ch = sc.nextLine().charAt(0);
-
-		char[] arr = new char[str.length()]; // char배열 생성(크기지정)
-
-		for (int i = 0; i < str.length(); i++) {
-			arr[i] = str.charAt(i); // 값을 인덱스 자리에 대입
-		}
-		int count = 0;
-		for (int i = 0; i < str.length(); i++) {
-
-			if (ch == arr[i]) {
-				count++;
-
-				System.out.println(arr[i] + "에 " + ch + "가 존재하는 위치(인덱스) :" + i);
-			}
-		}
-		*/
-		//System.out.println(ch + "개수 : " + count);
-		//sc.close();
 	
 	public void practice6() {
 		Scanner sc = new Scanner(System.in);
@@ -113,21 +90,29 @@ public class ArrayPractice {
 		}
 		sc.close();
 	}
+	
 	public void practice7() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("정수 : ");
-		int num = sc.nextInt();
-		
-		int[] arr = new int[num];
-		
-		for(int i = 0; i<=num ; i++) {
-			arr[i] = i;
-		}
-		for(int i = 0; i<=num ; i++) {
-			System.out.println(arr[i]);
-		}
+		System.out.print("정수 : "); 
+		int num = sc.nextInt();     //정수 입력
 
-	}
+		int[] arr = new int[num]; 
+		int sum = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print("배열" + i + "번째 인덱스에 넣을 값 : ");
+			arr[i] = sc.nextInt();
+			sum += arr[i];
+		}
+		
+		for (int i = 0; i < arr.length; i++) 
+			System.out.print(arr[i] + " ");
+
+		System.out.println();
+		System.out.println("총 합 : " + sum);	
+		sc.close();
+			}
+		
 
 	public void practice8() {
 		Scanner sc = new Scanner(System.in);
@@ -161,11 +146,35 @@ public class ArrayPractice {
 		}
 		sc.close();
 	}
+
 	public void practice9() {
+
 		Scanner sc = new Scanner(System.in);
-		System.out.print("치킨의 이름을 입력하세요: ");
-				
+
+		System.out.print("치킨 이름을 입력하세요 : ");
+		String name = sc.nextLine(); // 사용자 입력
+
+		String[] arr = { "후라이드", "양념", "파닭", "크크크" }; // 배렬
+
+		boolean result = false;
+
+		for (int i = 0; i < arr.length; i++) {
+
+			if (arr[i].equals(name)) {
+				result = true;
+				break;
+			}
+		}
+
+		if (result) {
+			System.out.println(name + "치킨 배달 가능");
+
+		} else {
+			System.out.println(name + "치킨은 없는 메뉴입니다.");
+		}
+		sc.close();
 	}
+	
 	public void practice10() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("주민등록번호(-포함) : ");
@@ -184,7 +193,88 @@ public class ArrayPractice {
 			}
 			System.out.print(copy[i]);
 		}
+	sc.close();	
+	}
+	public void practice11() {
 		
+		int[] arr = new int[10];
+		
+		for(int i = 0; i<arr.length;i++) {
+			arr[i] = (int)(Math.random()*10+1);
+		}
+		for(int i = 0; i<arr.length;i++) {
+			System.out.print(arr[i] + " ");
+		}
 	}
 	
+	public void practice12() {
+
+		int[] arr = new int[10];
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 10 + 1);
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+
+		int max = 10;
+		int min = 1;
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > min) {
+				min = arr[i];
+			}
+			if (arr[i] < max) {
+				max = arr[i];
+			}
+
+		}
+		System.out.println("최대값 : " + min);
+		System.out.println("최소값 : " + max);
+	}
+	
+	public void practice13() {
+		int[] arr = new int[10];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 10 + 1);
+
+			for (int j = 0; j < i; j++) {
+				if (arr[i] == arr[j]) {
+					i--;   //i값을 줄여 준다 => 중복시 다음 인덱스로 넘어가지 않고 해당 인덱스에 다시 난수 값을 뽑는다.
+					break;
+				}
+			}
+		}
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+
+	public void practice14() {
+		int[] arr = new int[6];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 45 + 1);
+
+			for (int j = 0; j < i; j++) {
+				if (arr[i] == arr[j]) {
+					i--;
+					break;
+			}
+			}
+		}
+	}
+		
+
+	public void practice15() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+		
+		char[] arr = new char[str.length()];
+		
+		for(int i = 0; i<arr.length;i++) {
+			arr[i] = str.charAt(i);
+			arr[i]=str.charAt(i);
+		}
+	}
 }

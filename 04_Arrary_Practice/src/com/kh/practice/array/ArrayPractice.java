@@ -259,11 +259,14 @@ public class ArrayPractice {
 				if (arr[i] == arr[j]) {
 					i--;
 					break;
-			}
+				}
 			}
 		}
+
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
 	}
-		
 
 	public void practice15() {
 		Scanner sc = new Scanner(System.in);
@@ -274,7 +277,9 @@ public class ArrayPractice {
 		
 		for(int i = 0; i<arr.length;i++) {
 			arr[i] = str.charAt(i);
-			arr[i]=str.charAt(i);
+			arr[i]=str.charAt(i);       
+			
+			
 		}
 	}
 }

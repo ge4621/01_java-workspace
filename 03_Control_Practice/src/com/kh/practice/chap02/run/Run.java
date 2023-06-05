@@ -16,7 +16,7 @@ public static void main(String[] args) {
 	//a.practice8();  //ok
 	//a.practice9();  //ok
 	//a.practice10(); //ok
-	a.practice11(); //다시
+	//a.practice11(); //다시
 	//a.practice12(); //
 	//a.practice13();
 	//a.practice14();

@@ -224,25 +224,54 @@ sc.close();
 	}
 
 	public void practice12() {
+		//스캐너 선언
 		Scanner sc = new Scanner(System.in);
 
-		while (true) {
+		while (true) {     //출력 구문
 			System.out.print("연산자(+, -, *, /, %) : ");
 			String str = sc.nextLine();
 			
-			if (str.equals("exit")) {
+			if (str.equals("exit")) {  //String때문에 equals이용
 				System.out.println("프로그램을 종료합니다.");
-				break;
+				break;  //반복문 종료  /1차적으로 실행해서 확인
 			}
 
 			System.out.print("정수1 : ");
 			int num1 = sc.nextInt();
 			
 			System.out.print("정수2 : ");
-			int num2 = sc.nextInt();
+			int num2 = sc.nextInt();   //정수 출력 구문
 			
-			sc.nextLine();
+			sc.nextLine();  //nextInt - nextInt 다음에 사용
 			
+			//.연산자는 나눗셈조건 => 
+			if(str.equals("/")&&num2==0) {
+				System.out.println("0으로 나눌수 없습니다. 다시 입력해 주세요");
+				continue;
+			}
+			
+			//나며지 연산
+			switch(str) {
+			case "+":
+				System.out.printf("%d %s %d = %d\n",num1,str,num2,(num1+num2));
+				break;
+			case "-":
+				System.out.printf("%d %s %d = %d\n",num1,str,num2,(num1-num2));
+				break;
+			case "*":
+				System.out.printf("%d %s %d = %d\n",num1,str,num2,(num1*num2));
+				break;
+			case "/":
+				System.out.printf("%d %s %d = %d\n",num1,str,num2,(num1/num2));
+				break;
+			case "%":
+				System.out.printf("%d %s %d = %d\n",num1,str,num2,(num1%num2));
+				break;
+			default : 
+				System.out.println("없는 연산자 입니다. 다시 입력해주세요.");
+			}
+			
+			/*
 			switch (str) {
 			case "+":
 				System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
@@ -269,6 +298,7 @@ sc.close();
 				continue;
 			}
 			break;
+		}*/
 		}
 		sc.close();
 	}

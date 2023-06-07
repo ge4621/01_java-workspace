@@ -19,8 +19,8 @@ public class Run {
 		//a.practice11();
 		//a.practice12();
 		//a.practice13();
-		//a.practice14();  //오름차순
+		a.practice14();  //오름차순
 		//a.practice15();
-		a.practice16();
+		//a.practice16();
 	}
 }

@@ -43,76 +43,75 @@ public class Employee {
 	public int getEmpNo() {
 		return empNo;
 	}
-	public void setEmpNo() {
+	public void setEmpNo(int empNo) {
 		this.empNo = empNo;
 	}
 	
 	public String getEmpName() {
 		return empName;
 	}
-	public void setEmpName() {
+	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
 	
 	public String getDept() {
 		return dept;
 	}
-	public void setDept() {
+	public void setDept(String dept) {
 		this.dept = dept;
 		
 	}
 	public String getJob() {
 		return job;
 	}
-	public void setJod() {
+	public void setJod(String job) {
 		this.job = job;
 		
 	}
 	public int getAge() {
 		return age;
 	}
-	public void setAge() {
+	public void setAge(int age) {
 		this.age = age;
 		
 	}
 	public char getGender() {
 		return gender;
 	}
-	public void setGender() {
+	public void setGender(char gender) {
 		this.gender = gender;
 		
 	}
 	public int getSalary() {
 		return salary;
 	}
-	public void setSalary() {
+	public void setSalary(int salary) {
 		this.salary = salary;
 		
 	}
 	public double getBonusPoint() {
 		return bonusPoint;
 	}
-	public void setBonusPoint() {
+	public void setBonusPoint(double bonuspoint) {
 		this.bonusPoint = bonusPoint;
 		
 	}
 	public String getPhone() {
 		return phone;
 	}
-	public void setPhone() {
+	public void setPhone(String phone) {
 		this.phone = phone;
 		
 	}
 	public String getAddress() {
 		return address;
 	}
-	public void setAddress() {
+	public void setAddress(String address) {
 		this.address=address;
 		
 	}
 	public String information() {
-		return empNo +","+ empName +","+ dept + ", " + job + ", "+ age + ", " + gender + "," + salary+ "," + bonusPoint +"," + phone+ "," + address ;
+		return empNo +", "+ empName +", "+ dept + ", " + job + ", "+ age + ", " + gender + ", " + salary+ ", " + bonusPoint +", " + phone+ ", " + address ;
 	}
-	//public String information() {
-		//return empName + "의 연봉 : " + (salary +(salary *bonusPoint)) * 12;
+	
 }

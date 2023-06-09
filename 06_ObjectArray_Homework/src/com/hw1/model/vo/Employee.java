@@ -37,7 +37,7 @@ public class Employee {
 		this.phone = phone;
 		this.address = address;
 		
-	}
+	}//자료형이 달라서 위하고 변수를 같이 사용할 수 있다.
 	
 	
 	public int getEmpNo() {
@@ -64,7 +64,7 @@ public class Employee {
 	public String getJob() {
 		return job;
 	}
-	public void setJod(String job) {
+	public void setJob(String job) {
 		this.job = job;
 		
 	}
@@ -92,7 +92,7 @@ public class Employee {
 	public double getBonusPoint() {
 		return bonusPoint;
 	}
-	public void setBonusPoint(double bonuspoint) {
+	public void setBonusPoint(double bonusPoint) {
 		this.bonusPoint = bonusPoint;
 		
 	}

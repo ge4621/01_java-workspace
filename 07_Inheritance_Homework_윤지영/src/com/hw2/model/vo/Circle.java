@@ -15,7 +15,7 @@ public class Circle extends Point{
 	public void setRadius(int radius) {
 		this.radius = radius;
 	}
-	public void draw() {
-		
+	void draw() {
+		super.draw();
 	}
 }

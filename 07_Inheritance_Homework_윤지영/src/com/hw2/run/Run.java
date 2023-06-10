@@ -8,7 +8,7 @@ public class Run {
 	public static void main(String[] args) {
 
 		Circle[] arr = new Circle[2];
-		Rectangle[] grr= new Rectangle[2];
+		
 		
 	}
 

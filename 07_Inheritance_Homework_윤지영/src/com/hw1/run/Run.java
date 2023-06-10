@@ -31,6 +31,8 @@ public class Run {
 		while (true) { //무한 반복
 			//int count = 0;
 			for(int i = 0 ; i<emp.length;i++) {
+				
+				
 				System.out.print("이름을 입력하세요. : ");
 				String name = sc.nextLine();
 				

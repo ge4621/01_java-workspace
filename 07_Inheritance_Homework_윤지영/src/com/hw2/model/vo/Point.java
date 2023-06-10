@@ -21,9 +21,8 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
-	public void draw(int x,int y) {
-		this.x = x;
-		this.y = y;
+	void draw() {
+		System.out.println("(  x ,  y )");
 	}
 	
 }

@@ -15,7 +15,11 @@ public class Circle extends Point{
 	public void setRadius(int radius) {
 		this.radius = radius;
 	}
+	@Override
 	void draw() {
-		super.draw();
+		
+		
+		System.out.println("면적 : " + (Math.PI * radius * radius));
+		System.out.println("둘레 : " + (Math.PI * radius * 2));
 	}
 }

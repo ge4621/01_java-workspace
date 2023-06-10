@@ -23,7 +23,12 @@ public class Rectangle extends Point{
 	public void setHeight(double height) {
 		this.height = height;
 	}
-	public void draw() {
+	
+	@Override
+	void draw() {
 		
+		System.out.println("면적 : " + (width * height));
+		System.out.println("둘레 : " + 2*(width + height));
 	}
+	
 }

@@ -7,9 +7,9 @@ public class Run {
 
 	public static void main(String[] args) {
 
-<<<<<<< HEAD
+
 		
-=======
+
 		System.out.println("==================Circle========================");
 
 		Circle[] arr = new Circle[2];  //크기가 2인 객체 배열
@@ -34,6 +34,5 @@ public class Run {
 			
 			System.out.println();
 		}
->>>>>>> 80982a48417cd7a9535f108c6c842db99f53ee65
 	}
 }

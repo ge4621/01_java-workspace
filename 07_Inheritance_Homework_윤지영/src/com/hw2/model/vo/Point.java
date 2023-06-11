@@ -9,8 +9,8 @@ public class Point {
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
-<<<<<<< HEAD
-=======
+
+
 	}
 	public int getX() {
 		return x;
@@ -27,7 +27,7 @@ public class Point {
 	
 	public void draw() {
 		System.out.println("x좌표 : " + x + ", y좌표는 : " + y);
->>>>>>> 80982a48417cd7a9535f108c6c842db99f53ee65
+
 	}
 	
 }

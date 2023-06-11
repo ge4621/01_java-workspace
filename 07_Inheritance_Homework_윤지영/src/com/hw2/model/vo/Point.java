@@ -5,6 +5,7 @@ public class Point {
 	private int y;
 	
 	public Point() {}
+	
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -21,8 +22,9 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
-	void draw() {
-		System.out.println("(  x ,  y )");
+	
+	public void draw() {
+		System.out.println("x좌표 : " + x + ", y좌표는 : " + y);
 	}
 	
 }

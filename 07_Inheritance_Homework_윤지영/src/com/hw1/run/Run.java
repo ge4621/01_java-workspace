@@ -27,8 +27,9 @@ public class Run {
 		// 사원들의 정보를 키보드로 계속 입력 받고 → while(true) 무한 반복문을 통해
 		Scanner sc = new Scanner(System.in); // 키보드 입력
 
+		int count = 0;
+		
 		while (true) { // 무한 반복
-			int count = 0;
 			for (int i = 0; i < emp.length; i++) {
 
 				System.out.print("이름을 입력하세요. : ");
@@ -65,8 +66,12 @@ public class Run {
 				if (a == 'n' || a == 'N') {
 					System.out.println("종료합니다.");
 
-					for (int j = 0; j < emp.length; j++)
-						System.out.println(emp[j].toString());
+					for (int j = 0; j < emp.length; j++) {
+						if(emp[j] != null) {
+							System.out.println(emp[j].toString());
+							
+						}
+					}
 
 					break;
 					

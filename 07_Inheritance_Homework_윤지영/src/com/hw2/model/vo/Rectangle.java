@@ -1,34 +1,39 @@
 package com.hw2.model.vo;
 
-public class Rectangle extends Point{
-	private double width;
-	private double height;
-	
+public class Rectangle extends Point {
+	private int width;
+	private int height;
+
 	public Rectangle() {
 	}
-	public Rectangle(int x, int y, double width, double height) {
-		super(x,y);
+
+	public Rectangle(int x, int y, int width, int height) {
+		super(x, y);
 		this.height = height;
 		this.width = width;
 	}
-	public double getWidth() {
+
+	public int getWidth() {
 		return width;
 	}
-	public void setWidth(double width) {
+
+	public void setWidth(int width) {
 		this.width = width;
 	}
-	public double getHeight() {
+
+	public int getHeight() {
 		return height;
 	}
-	public void setHeight(double height) {
+
+	public void setHeight(int height) {
 		this.height = height;
 	}
-	
-	@Override
-	void draw() {
-		
-		System.out.println("면적 : " + (width * height));
-		System.out.println("둘레 : " + 2*(width + height));
+
+	public void draw() {
+		super.draw();
+
+		System.out.println("면적 : " + (this.width * this.height));
+		System.out.println("둘레 : " + 2 * (this.width + this.height));
 	}
-	
+
 }

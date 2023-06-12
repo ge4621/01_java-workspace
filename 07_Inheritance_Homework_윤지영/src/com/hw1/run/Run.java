@@ -29,60 +29,128 @@ public class Run {
 
 		int count = 0;
 		
+		//강사님 코드(간결하다....)
+		
 		while (true) { // 무한 반복
-			for (int i = 0; i < emp.length; i++) {
+			// for (int i = 0; i < emp.length; i++) {
 
-				System.out.print("이름을 입력하세요. : ");
-				String name = sc.nextLine();
+			System.out.println((count + 1) + "번째 사원");
 
-				System.out.print("나이를 입력하세요. : ");
-				int age = sc.nextInt();
+			System.out.print("이름을 입력하세요. : ");
+			String name = sc.nextLine();
 
-				sc.nextLine();
+			System.out.print("나이를 입력하세요. : ");
+			int age = sc.nextInt();
 
-				System.out.print("키를 입력하세요. : ");
-				double height = sc.nextDouble();
+			System.out.print("키를 입력하세요. : ");
+			double height = sc.nextDouble();
 
-				System.out.print("몸무게를 입력하세요. : ");
-				double weight = sc.nextDouble();
+			System.out.print("몸무게를 입력하세요. : ");
+			double weight = sc.nextDouble();
 
-				System.out.print("급여을 입력하세요. : ");
-				int salary = sc.nextInt();
+			System.out.print("급여을 입력하세요. : ");
+			int salary = sc.nextInt();
 
-				sc.nextLine();
+			sc.nextLine();
 
-				System.out.print("부서를 입력하세요. : ");
-				String dept = sc.nextLine();
+			System.out.print("부서를 입력하세요. : ");
+			String dept = sc.nextLine();
 
-				count++;
+			emp[count] = new Employee(name, age, height, weight, salary, dept);
 
-				emp[i] = new Employee(name, age, height, weight, salary, dept);
-				
-				System.out.println(emp[i].toString());
+			// 한명씩 추가 될때마다 카운트
+			count++;
 
-				System.out.print("계속하시겠습니까? : ");
-				char a = sc.nextLine().charAt(0);
+			// System.out.println(emp[i].toString());
 
-				if (a == 'n' || a == 'N') {
-					System.out.println("종료합니다.");
+			System.out.print("계속하시겠습니까? : ");
+			char a = sc.nextLine().charAt(0);
 
-					for (int j = 0; j < emp.length; j++) {
-						if(emp[j] != null) {
-							System.out.println(emp[j].toString());
-							
-						}
+			// 계속 추가 할 것인지 물어보고 ,대소문자 상관없이 y이면 계속,n이면 그만 입력
+
+			if (a == 'n' || a == 'N') {
+				// 반복문 빠져나와
+				break;
+			}
+		
+			// 출력
+			if (count == 10) {
+				break;
+			}
+
+		}
+		// 배열에 담긴 사원들의 정보를 모두 출력
+		for (int i = 0; i < count; i++) {
+			System.out.println(emp[i]);
+
+
+		}
+		System.out.println("종료합니다.");
+
+	}
+	/*
+	<내가 한 코드>
+	Employee[] emp = new Employee[10];
+
+	// 사원들의 정보를 키보드로 계속 입력 받고 → while(true) 무한 반복문을 통해
+	Scanner sc = new Scanner(System.in); // 키보드 입력
+
+	int count = 0;
+	
+	while (true) { // 무한 반복
+		for (int i = 0; i < emp.length; i++) {
+
+			System.out.print("이름을 입력하세요. : ");
+			String name = sc.nextLine();
+
+			System.out.print("나이를 입력하세요. : ");
+			int age = sc.nextInt();
+
+			sc.nextLine();
+
+			System.out.print("키를 입력하세요. : ");
+			double height = sc.nextDouble();
+
+			System.out.print("몸무게를 입력하세요. : ");
+			double weight = sc.nextDouble();
+
+			System.out.print("급여을 입력하세요. : ");
+			int salary = sc.nextInt();
+
+			sc.nextLine();
+
+			System.out.print("부서를 입력하세요. : ");
+			String dept = sc.nextLine();
+
+			count++;
+
+			emp[i] = new Employee(name, age, height, weight, salary, dept);
+			
+			System.out.println(emp[i].toString());
+
+			System.out.print("계속하시겠습니까? : ");
+			char a = sc.nextLine().charAt(0);
+
+			if (a == 'n' || a == 'N') {
+				System.out.println("종료합니다.");
+
+				for (int j = 0; j < emp.length; j++) {
+					if(emp[j] != null) {
+						System.out.println(emp[j].toString());
+						
 					}
-
-					break;
-					
-				} else if (a == 'y' || a == 'Y') {
-					
 				}
 
+				break;
+				
+			} else if (a == 'y' || a == 'Y') { // 실행구문에 쓸게 없으면 지우기 (지워야 하는데 여기서 지우면 오류가 뜬다.....)
+				
 			}
-			break;
-		
+
 		}
+		break;
+	
 	}
+	*/
 
 }

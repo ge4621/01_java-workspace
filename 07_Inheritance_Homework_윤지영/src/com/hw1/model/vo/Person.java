@@ -33,6 +33,7 @@ public class Person {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
+	@Override
 	public String toString() {
 		return "나이 : " + age+ ", " + "키 : " + height + ", " + "몸무게 : " +weight ;  
 	}

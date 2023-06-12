@@ -24,6 +24,7 @@ public class Employee extends Person{
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
+	@Override  //정확한 표현으로는 쓰는게 맞다.(그냥 무조건 쓰자)
 	public String toString() {
 		return "이름 : " + name + ", "+super.toString() + ", 급여 : "+salary + ", 부서 : "+dept;
 	}

@@ -24,7 +24,7 @@ public class PolyRun {
 		// c1레퍼런스로 Child1, Parent 둘 다 접근 가능
 		// Parent 접근시 자동으로 형 변환 된채로 진행된거다.
 
-		System.out.println("3. 부모 타입 레퍼런스로 자식 객체를 다루는 경우(댜형성");
+		System.out.println("3. 부모 타입 레퍼런스로 자식 객체를 다루는 경우(댜형성)");
 		Parent p2 = /* (Parent) */ new Child1(); // 자료형이 다르다. => 에러 안뜬다 => 자동형변환 됨
 		p2.printParent();
 

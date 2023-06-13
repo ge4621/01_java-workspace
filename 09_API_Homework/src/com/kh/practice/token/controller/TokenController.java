@@ -7,9 +7,11 @@ public class TokenController {
 	public TokenController() {}
 	
 	public String afterToken(String str) {
-		
+		String sum = "";
 		StringTokenizer stn = new StringTokenizer(str," ");
-		
+		for(int i = 0; i<stn.countTokens();i++) {
+			sum+=stn.nextToken();
+		}return sum;
 	}
 	
 	public String firstCap(String input) {

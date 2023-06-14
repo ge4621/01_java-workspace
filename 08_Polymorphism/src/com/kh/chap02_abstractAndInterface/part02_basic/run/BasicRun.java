@@ -71,9 +71,6 @@ public class BasicRun {
 		 * 					강제성이 더 짙어진다.(규약이 더 쎄짐)
 		 */
 		
-		
-		
-		
 	}
 
 }

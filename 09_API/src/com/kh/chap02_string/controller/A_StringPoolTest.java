@@ -14,8 +14,8 @@ public class A_StringPoolTest {
 		String str2 = new String("hello");  //매개변수 생성자
 		
 		//주소값이 출력되지 않을까?
-		System.out.println(str1.toString());
-		System.out.println(str2);
+		System.out.println(str1 == str2); //주소값을 비교하니까 당연히 false
+		System.out.println(str1.equals(str2));  //무조건 equals로 비교해야한다.!!!
 		//String 클래스에 toString() 메소드가 이미 오버라이딩 되어있다.(실제 담긴 문자열 반환하도록)
 		
 		//동등비교

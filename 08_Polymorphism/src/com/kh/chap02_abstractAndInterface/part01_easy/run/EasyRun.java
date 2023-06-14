@@ -15,7 +15,7 @@ public class EasyRun {
 		Sports s = new BasketBall(); //부모타입 레퍼런스로 자식객체 생성(다향성) // 다형성 적용 시켜서 부모타입으로 객체를 받아주는 형태는 가능
 		
 		Sports[] arr = new Sports[2]; //객체생선 전 ,배열만 만들어지 상태
-	// 부모				자식
+			// 부모				자식
 		arr[0] = new BasketBall(); //객체 생성
 		arr[1] = new FootBall();
 		

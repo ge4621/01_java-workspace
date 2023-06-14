@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package com.kh.practice.run;
 
 import com.kh.practice.func.OperatorPractice;
@@ -45,4 +45,4 @@ public class Run {
 		
 	}
 }
->>>>>>> a9e355c37b13554dcaec6ebc594c0a70e702e989
+

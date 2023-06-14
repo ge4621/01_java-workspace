@@ -11,34 +11,36 @@ public class TokenMenu {
 
 	public void mainMenu() {
 
+		while(true) {
+			
 		System.out.println("1. 지정문자열");
 		System.out.println("2. 입력문자열");
 		System.out.println("9. 프로그램 끝내기");
+		
 
 		System.out.print("메뉴번호 : ");
 		int num = sc.nextInt();
 
-		
-		switch (num) {
-		case 1:
-			tokenMenu();
-			break;
-
-		case 2:
-			inputMenu();
-			break;
 			
-		case 9:
-			System.out.println("프로그램을 종료합니다.");
+			switch (num) {
+			case 1:
+				tokenMenu();
+				continue;
+				
+			case 2:
+				inputMenu();
+				continue;
+				
+			case 9:
+				System.out.println("프로그램을 종료합니다.");
+				break;
+			}
 			break;
-
 		}
 
 	}
 
 	public void tokenMenu() {
-		
-		
 		
 		String str = "J a v a P r o g r a m ";
 		System.out.println("토큰 처리 전 글자 : " + str);
@@ -53,14 +55,15 @@ public class TokenMenu {
 
 	public void inputMenu() {
 
-		System.out.println("문자열을 입력하세요 : ");
+		System.out.print("문자열을 입력하세요 : ");
+		String str = sc.next();
 		
+		System.out.println("첫 글자 대문자 : " + tc.firstCap(str));
 		
-		System.out.println("첫 글자 대문자 : ");
+		System.out.print("찾을 문자 하나를 입력하세요. : ");
+		char ch = sc.nextLine().charAt(0);
 		
-		System.out.println("찾을 문자 하나를 입력하세요. : ");
-		
-		System.out.println("문자가 들어간 개수 : ");
+		//System.out.println("문자가 들어간 개수 : "+tc.findChar(str,ch);
 
 	}
 

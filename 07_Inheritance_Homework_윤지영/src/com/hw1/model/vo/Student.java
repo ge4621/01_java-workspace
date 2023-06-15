@@ -9,7 +9,7 @@ public class Student extends Person {
 	public Student() {}
 	
 	public Student(String name, int age, double height, double weight, int grade, String major) {
-		super(age,height,weight);    //부모에서 private를 사용했기 때문에 name와 다르게 써야 한다.
+		super(age,height,weight);    //부모에서 private를 사용했기 때문에 name은 다르게 써야 한다.
 		super.name = name;          //super. => 부모 객체에 직접접근
 		this.grade = grade;			// this. => 자식객체에 직접 접근
 		this.major = major;

@@ -42,6 +42,7 @@ public class Run {
 		}
 		System.out.println("===========================================================");
 		
+		
 		int sum = 0;
 		for(int i = 0; i<emp.length; i++) {
 			sum += (int)(emp[i].getSalary() +(emp[i].getSalary() *emp[i].getBonusPoint())) * 12;

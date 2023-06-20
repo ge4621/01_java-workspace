@@ -1,5 +1,6 @@
 package com.kh.chap04_assist.part02_object.model.dao;
 
+import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -46,18 +47,25 @@ public class ObjectDao {
 		
 		try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("d_phone.txt"))){
 			
+			/*
 			System.out.println(ois.readObject());
 			System.out.println(ois.readObject());
 			System.out.println(ois.readObject());
 			
 			System.out.println(ois.readObject());//파일의 끝을 만나는 순간 예외 발생 => EOFException
 			
+			*/
 			
+			while(true) {
+				System.out.println(ois.readObject());
+			}
 			
-		} catch (IOException e) {
-			e.printStackTrace();
+		}catch(EOFException e) {
+			//e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
+		} catch (IOException e) {
+			
 		}
 		
 	}

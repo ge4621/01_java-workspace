@@ -9,7 +9,7 @@ public class MusicController {
 	
 	ArrayList<Music> list = new ArrayList<>();  
 	{
-		list.add(new Music("아이브", "아이엠"));
+		list.add(new Music("아이엠", "아이브"));
 		list.add(new Music("아이들", "퀸카"));
 		list.add(new Music("세븐틴", "손오공"));
 		
@@ -35,5 +35,15 @@ public class MusicController {
 		}
 		return result;
 	}
-	
+	public ArrayList<Music> searchMusic(String keyword) {
+		
+		ArrayList<Music> searchList = new ArrayList<>();
+		
+		for(int i = 0; i<list.size(); i++) {
+			if(list.get(i).getTitle().contains(keyword)) {
+				searchList.add(list.get(i));
+			}
+		}
+		return searchList;
+	}
 }

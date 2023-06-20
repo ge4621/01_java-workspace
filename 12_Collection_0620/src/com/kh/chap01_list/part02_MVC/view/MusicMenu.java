@@ -130,6 +130,22 @@ public class MusicMenu {
 	public void searchMusic() {
 		System.out.println("=========특정 곡 검색=================");
 		
+		sc.nextLine();
+		
+		System.out.print("검색하고 싶은 곡(키워드 입력)입력 : ");
+		String keyword = sc.nextLine();
+		
+		ArrayList<Music> searchList = mc.searchMusic(keyword);
+		
+		if(searchList.isEmpty()){
+			System.out.println("검색결과가 없습니다.");
+		}else {
+			for(int i=0; i<searchList.size();i++) {
+				System.out.println(searchList.get(i));
+			}
+		}
+		
+		
 	}
 	/**
 	 * 5. 특정 곡 수정해주는 서브화면

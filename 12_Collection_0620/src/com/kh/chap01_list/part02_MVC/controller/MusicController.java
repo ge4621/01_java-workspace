@@ -10,8 +10,8 @@ public class MusicController {
 	ArrayList<Music> list = new ArrayList<>();  
 	{
 		list.add(new Music("아이엠", "아이브"));
-		list.add(new Music("아이들", "퀸카"));
-		list.add(new Music("세븐틴", "손오공"));
+		list.add(new Music("퀸카", "아이들"));
+		list.add(new Music("손오공", "세븐틴"));
 		
 	}
 	
@@ -46,4 +46,26 @@ public class MusicController {
 		}
 		return searchList;
 	}
+	
+	public int updateMusic(String title, String uptitle, String upartist) {
+		
+		int result = 0;
+		
+		for(int i = 0; i<list.size();i++) {
+			if(list.get(i).getTitle().equals(title)) {
+				list.get(i).setTitle(uptitle);
+				list.get(i).setArtist(upartist);
+				result = 1; 
+				break;
+			}
+		}
+		
+		return result;
+		
+	}
+	
+	
+	
+	
+	
 }

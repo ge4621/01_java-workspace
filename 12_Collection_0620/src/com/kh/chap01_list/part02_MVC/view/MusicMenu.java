@@ -153,6 +153,28 @@ public class MusicMenu {
 	public void updateMusic() {
 		System.out.println("=========특정 곡 수정 ===============");
 		
+		sc.nextLine();
+		
+		System.out.println("수정하고싶은 노래");
+		String title = sc.nextLine();
+		
+		
+		System.out.println("제목 수정 : ");
+		String uptitle = sc.nextLine();
+		
+		System.out.println("수정 가수: ");
+		String upartist = sc.nextLine();
+		
+		int result = mc.updateMusic(title,uptitle,upartist);
+		
+		if(result>0) {
+			System.out.println("성공적으로 수정");
+			selectMusic();
+		}else {
+			System.out.println("수정값을 찾지 못했습니다.");
+		}
+		
+		
 	}
 		
 	

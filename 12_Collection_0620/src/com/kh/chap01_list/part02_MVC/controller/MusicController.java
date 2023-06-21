@@ -9,9 +9,9 @@ public class MusicController {
 	
 	ArrayList<Music> list = new ArrayList<>();  
 	{
-		list.add(new Music("아이브", "아이엠"));
-		list.add(new Music("아이들", "퀸카"));
-		list.add(new Music("세븐틴", "손오공"));
+		list.add(new Music("아이엠", "아이브"));
+		list.add(new Music("퀸가", "아이들"));
+		list.add(new Music("손오공", "세븐"));
 		
 	}
 	
@@ -24,16 +24,23 @@ public class MusicController {
 		
 		return list;
 	}
+
 	public int deleteMusic(String title) {
-		
-		int result = 0; 
-		for(int i = 0; i<list.size();i++) {
-			if(list.get(i).getTitle().equals(title));
-			list.remove(i);
-			result = 1;
-			break;
+
+		int result = 0;
+
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getTitle().equals(title)) {
+
+				list.remove(i);
+				result = 1;
+				break;
+			}
 		}
 		return result;
 	}
-	
+	public void searchMusic(String keyword) {
+		
+	}
+
 }

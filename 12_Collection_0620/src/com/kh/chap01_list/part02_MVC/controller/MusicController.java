@@ -10,14 +10,10 @@ public class MusicController {
 	ArrayList<Music> list = new ArrayList<>();  
 	{
 		list.add(new Music("아이엠", "아이브"));
-<<<<<<< HEAD
+
 		list.add(new Music("퀸가", "아이들"));
 		list.add(new Music("손오공", "세븐"));
-=======
-		list.add(new Music("퀸카", "아이들"));
-		list.add(new Music("손오공", "세븐틴"));
->>>>>>> 6679743967226419902fe255f9fe410bf922cd55
-		
+
 	}
 	
 	public void insertMusic(String title, String artist) {
@@ -44,12 +40,7 @@ public class MusicController {
 		}
 		return result;
 	}
-<<<<<<< HEAD
-	public void searchMusic(String keyword) {
-		
-	}
 
-=======
 	public ArrayList<Music> searchMusic(String keyword) {
 		
 		ArrayList<Music> searchList = new ArrayList<>();
@@ -62,14 +53,15 @@ public class MusicController {
 		return searchList;
 	}
 	
-	public int updateMusic(String title, String uptitle, String upartist) {
+	public int updateMusic(String title, String upArtist, String upTitle) {
 		
 		int result = 0;
 		
 		for(int i = 0; i<list.size();i++) {
-			if(list.get(i).getTitle().equals(title)) {
-				list.get(i).setTitle(uptitle);
-				list.get(i).setArtist(upartist);
+			Music m = list.get(i);
+			if(m.getTitle().equals(title)) {
+				m.setTitle(upTitle);
+				m.setArtist(upArtist);
 				result = 1; 
 				break;
 			}
@@ -80,8 +72,5 @@ public class MusicController {
 	}
 	
 	
-	
-	
-	
->>>>>>> 6679743967226419902fe255f9fe410bf922cd55
+
 }

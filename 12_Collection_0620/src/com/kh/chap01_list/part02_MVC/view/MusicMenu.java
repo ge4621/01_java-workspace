@@ -89,7 +89,7 @@ public class MusicMenu {
 	 * 2. 곡 전체 조회하는 서브화면
 	 */
 	public void selectMusic() {
-		System.out.println("=========곡 전체 조회=================");
+		System.out.println("\n=========곡 전체 조회=================");
 		
 		ArrayList<Music> list = mc.selectMusic(); //곡을 담고 있는 리스트 가져오기
 		
@@ -107,7 +107,7 @@ public class MusicMenu {
 	 * 3. 특정곡 삭제해주는 서브화면
 	 */
 	public void deleteMusic() {
-		System.out.println("=========특정 곡 삭제=================");
+		System.out.println("\n=========특정 곡 삭제=================");
 	
 		sc.nextLine(); 
 		
@@ -128,20 +128,17 @@ public class MusicMenu {
 	 * 4. 특정 곡 검색해주는 서브화면
 	 */
 	public void searchMusic() {
-		System.out.println("=========특정 곡 검색=================");
+		System.out.println("\n=========특정 곡 검색=================");
 		
-<<<<<<< HEAD
-		System.out.println("검색하고 싶은 노래 : ");
-		String keyword = sc.nextLine();
-		
-		mc.searchMusic();
-=======
 		sc.nextLine();
 		
 		System.out.print("검색하고 싶은 곡(키워드 입력)입력 : ");
 		String keyword = sc.nextLine();
 		
+		
 		ArrayList<Music> searchList = mc.searchMusic(keyword);
+		
+		
 		
 		if(searchList.isEmpty()){
 			System.out.println("검색결과가 없습니다.");
@@ -152,27 +149,26 @@ public class MusicMenu {
 		}
 		
 		
->>>>>>> 6679743967226419902fe255f9fe410bf922cd55
+
 	}
 	/**
 	 * 5. 특정 곡 수정해주는 서브화면
 	 */
 	public void updateMusic() {
-		System.out.println("=========특정 곡 수정 ===============");
+		System.out.println("\n=========특정 곡 수정 ===============");
+		
+		System.out.print("수정하고싶은 노래 : ");
+		String title = sc.nextLine();
 		
 		sc.nextLine();
 		
-		System.out.println("수정하고싶은 노래");
-		String title = sc.nextLine();
+		System.out.print("수정 가수: ");
+		String upArtist = sc.nextLine();
+		System.out.print("제목 수정 : ");
+		String upTitle = sc.nextLine();
 		
 		
-		System.out.println("제목 수정 : ");
-		String uptitle = sc.nextLine();
-		
-		System.out.println("수정 가수: ");
-		String upartist = sc.nextLine();
-		
-		int result = mc.updateMusic(title,uptitle,upartist);
+		int result = mc.updateMusic(title,upArtist,upTitle);
 		
 		if(result>0) {
 			System.out.println("성공적으로 수정");
@@ -183,6 +179,7 @@ public class MusicMenu {
 		
 		
 	}
-		
+	
 	
 }
+		

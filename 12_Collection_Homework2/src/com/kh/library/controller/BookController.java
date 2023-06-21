@@ -42,12 +42,21 @@ public class BookController implements BookManager  {
 		
 		ArrayList<Book> searchList = new ArrayList<>();
 		
+		for(Book a :bList) {
+			if(a instanceof Magazine) {
+				continue;
+			}else if(a.getTitle().contains(title)) {
+				searchList.add(a);
+			}
+		}
+		
+		/*
 		for(int i = 0; i<bList.size();i++) {
 			if(bList.get(i).getTitle().contains(title)) {
 				searchList.add(bList.get(i));
 			}
-		}
-		
+		} // book과 magazine같이 나온다.
+		*/
 		return searchList;
 	}
 

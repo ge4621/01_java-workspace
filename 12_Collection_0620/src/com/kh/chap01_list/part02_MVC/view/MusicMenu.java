@@ -130,16 +130,57 @@ public class MusicMenu {
 	public void searchMusic() {
 		System.out.println("=========특정 곡 검색=================");
 		
+<<<<<<< HEAD
 		System.out.println("검색하고 싶은 노래 : ");
 		String keyword = sc.nextLine();
 		
 		mc.searchMusic();
+=======
+		sc.nextLine();
+		
+		System.out.print("검색하고 싶은 곡(키워드 입력)입력 : ");
+		String keyword = sc.nextLine();
+		
+		ArrayList<Music> searchList = mc.searchMusic(keyword);
+		
+		if(searchList.isEmpty()){
+			System.out.println("검색결과가 없습니다.");
+		}else {
+			for(int i=0; i<searchList.size();i++) {
+				System.out.println(searchList.get(i));
+			}
+		}
+		
+		
+>>>>>>> 6679743967226419902fe255f9fe410bf922cd55
 	}
 	/**
 	 * 5. 특정 곡 수정해주는 서브화면
 	 */
 	public void updateMusic() {
 		System.out.println("=========특정 곡 수정 ===============");
+		
+		sc.nextLine();
+		
+		System.out.println("수정하고싶은 노래");
+		String title = sc.nextLine();
+		
+		
+		System.out.println("제목 수정 : ");
+		String uptitle = sc.nextLine();
+		
+		System.out.println("수정 가수: ");
+		String upartist = sc.nextLine();
+		
+		int result = mc.updateMusic(title,uptitle,upartist);
+		
+		if(result>0) {
+			System.out.println("성공적으로 수정");
+			selectMusic();
+		}else {
+			System.out.println("수정값을 찾지 못했습니다.");
+		}
+		
 		
 	}
 		

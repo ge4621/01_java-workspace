@@ -103,15 +103,19 @@ public class LibraryRun {
 					// 이전으로 가야함
 					
 				}
+				else 
+					System.out.println("잘못입력했습니다.");
+				
 				break;
 				
+				
 			case 2: // 2. 추가하기
+				sc.nextLine();	//**
 				System.out.print("bNo을 입력하세요 : ");
 				String bNo = sc.nextLine();
-				sc.nextLine();
 				
 				System.out.print("책 제목을 입력하세요 : ");
-				sc.nextLine();
+				//sc.nextLine();
 				String title = sc.nextLine();
 				
 				System.out.print("작가를 입력하세요 : ");
@@ -131,17 +135,57 @@ public class LibraryRun {
 				System.out.print("일반도서이면 true, 잡지이면 false를 입력하세요 : ");
 				Boolean bkOrMaga = sc.nextBoolean();
 				
-				if (bkOrMaga.equals(true)) {
-					
-				} else if (bkOrMaga.equals(false)) {
-					System.out.print("출간연도를 입력하세요 : ");
-					int year = sc.nextInt();
-					System.out.print("출간월을 입력하세요 : ");
-					int month = sc.nextInt();
-					
+				ArrayList<Book> bList = bc.getAllBook();
+				
+				int result = 0;
+				for(int i = 0; i<bList.size();i++) {
+					if(bList.get(i).getbNo().equals(bNo)) {
+						result = 1;
+					}
 				}
 				
-
+				if(result == 0) {
+					if(bkOrMaga.equals(true)){ // book
+						bc.addBook(new Book(bNo, title, author, publisher, price, description)); 
+						
+					}else if (bkOrMaga.equals(false)) { //magazine
+							System.out.print("출간연도를 입력하세요 : ");
+							int year = sc.nextInt();
+							System.out.print("출간월을 입력하세요 : ");
+							int month = sc.nextInt();
+							bc.addBook(new Magazine(bNo, title, author, publisher, price, description, year, month));
+				}
+				System.out.println("성공적으로 추가되었습니다.");
+			}else {
+				System.out.println("이미소장중입니다.");
+			}
+				
+				
+				/*
+				int num = 0;
+				for(int i = 0; i<bs.size();i++) {
+					if(bs.get(i).getbNo().equals(bNo)) {
+					num = 1;
+					System.out.println("이미 소장하고 있는 책입니다.");
+					break;
+					}
+				}
+				
+				if(bkOrMaga.equals(true)&& num == 0){ // book
+					bc.addBook(new Book(bNo, title, author, publisher, price, description)); 
+					System.out.println("Book추가 성공");
+				}else if (bkOrMaga.equals(false)&& num == 0) { //magazine
+						System.out.print("출간연도를 입력하세요 : ");
+						int year = sc.nextInt();
+						System.out.print("출간월을 입력하세요 : ");
+						int month = sc.nextInt();
+						bc.addBook(new Magazine(bNo, title, author, publisher, price, description, year, month));
+						System.out.println("Magazin추가 성공");
+						
+			}
+				//System.out.println();
+				 * 
+				 */
 				break;
 				
 			case 3:// 3. 책 찾기
@@ -163,22 +207,29 @@ public class LibraryRun {
 					System.out.print("bNo을 입력하세요 : ");
 					bNo = sc.nextLine();
 					
-					System.out.println(bc.searchBookBybNo(bNo));
-			
+					Book a = bc.searchBookBybNo(bNo);
+					
+					if(a == null) {
+						System.out.println("조회된 도서가 없습니다.");
+					}else if(a != null){
+						System.out.println(bc.searchBookBybNo(bNo));
+					}
+					
 					
 				} else if (search == 2) { // 책 제목으로 책 찾기
 					System.out.print("책 제목을 입력하세요 : ");
 					//sc.nextLine();
-					
 					title = sc.nextLine();
 					
 					ArrayList<Book> searchList = bc.searchBookByTitle(title);
 					
-					for(int i =0 ; i<searchList.size();i++) {
-						System.out.println(searchList.get(i));
-						
+						if(searchList.size() == 0) {
+							System.out.println("조회된 도서가 없습니다.");
+						}else {
+							for(int i =0 ; i<searchList.size();i++) {
+							System.out.println(searchList.get(i));
+						}
 					}
-					
 					
 					//bc.searchBookByTitle()
 					
@@ -186,10 +237,16 @@ public class LibraryRun {
 					System.out.print("출간연도를 입력하세요 : (올해 --> 2022) : ");
 					int year = sc.nextInt();
 					
-					ArrayList<Book> searchList = bc.magazineOfThisYearInfo(year);
+					ArrayList<Book> searchyear = bc.magazineOfThisYearInfo(year);
 					
+					if(searchyear.size() == 0) {
+						System.out.println("조회된 도서가 없습다.");
+					}else {
+						for(int i = 0; i<searchyear.size();i++) {
+							System.out.println(searchyear);
+					}
 					
-					
+				}
 					//magazineOfThisYearInfo()
 					
 				} else if (search == 4) { // 4. 출판사로 책 찾기
@@ -198,10 +255,13 @@ public class LibraryRun {
 					
 					ArrayList<Book> searchList = bc.searchBookByPublisher(publisher);
 					
-					for(int i = 0; i<searchList.size();i++) {
-						System.out.println(searchList.get(i));
+					if(searchList.size() == 0) {
+						System.out.println("조회된 도서가 없습니다.");
+					}else {
+						for(int i = 0; i<searchList.size();i++) {
+							System.out.println(searchList.get(i));
 					}
-					
+				}
 					//bc.searchBookByPublisher()
 					
 				} else if (search == 5) { // 5. 특정 가격 밑으로 책 찾기
@@ -211,10 +271,13 @@ public class LibraryRun {
 					
 					ArrayList<Book> searchList = bc.searchBookByPrice(price);
 					
-					for(int i = 0; i<searchList.size();i++) {
-						System.out.println(searchList.get(i));
+					if(searchList.size() == 0) {
+						System.out.println("조회된 도서가 없습니다.");
+					}else {
+						for(int i = 0; i<searchList.size();i++) {
+							System.out.println(searchList.get(i));
 					}
-					
+				}
 					//bc.searchBookByPrice()
 					
 				} else if (search == 6)

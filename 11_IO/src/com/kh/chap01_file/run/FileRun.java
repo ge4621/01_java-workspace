@@ -79,7 +79,7 @@ public class FileRun {
 		 * 
 		 *  *스트림의 구분
 		 *  >통로의 사이즈(1byte 짜리 / 2byte 짜리)
-		 *  -바이트 스트림 : 1byte 짜리만 왔다갔다 할 수 있을 정도의 사이즈(좁은 통로) => 입력(InputStream) / 출력(OutoutStream)
+		 *  -바이트 스트림 : 1byte 짜리만 왔다갔다 할 수 있을 정도의 사이즈(좁은 통로) => 입력(InputStream) / 출력(OutputStream)
 		 *  -문자 스트림 : 2byte 짜리도 왔다갔다 할 수 있을 정도의 사이즈 => 입력(Reader) / 출력(Writer)
 		 *  
 		 *  > 외부매체에 직접 연결하는 유무

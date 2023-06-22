@@ -13,6 +13,7 @@ public class BookController implements BookManager  {
 	@Override
 	public void addBook(Book nBook) {
 		
+		
 		bList.add(nBook);
 		
 	}
@@ -91,14 +92,16 @@ public class BookController implements BookManager  {
 	@Override
 	public ArrayList<Book> magazineOfThisYearInfo(int year) {
 		
-		ArrayList<Book> searchList = new ArrayList<>();
+		ArrayList<Book> searchyear = new ArrayList<>();
 		
-		for(int i = 0; i<bList.size();i++) {
-			
-			
+		for(int i =0; i<bList.size();i++) {
+			if(bList.get(i) instanceof Magazine &&((Magazine)bList.get(i)).getYear()==year) {
+				searchyear.add(bList.get(i));
+			}
+		
 		}
 		
-		return null;
+		return searchyear ;
 	}
 
 	@Override
@@ -133,31 +136,21 @@ public class BookController implements BookManager  {
 	@Override
 	public int getTotalPrice() {
 		
+		int total = 0;
+		for(int i = 0 ; i < bList.size();i++)
+			total += bList.get(i).getPrice();
 		
-		int sum = 0;
 		
-		for(int i = 0; i<bList.size();i++) {
-			sum += bList.get(i).getPrice();
-			sum++;
-			
-		}
-		
-		return sum;
+		return total;
 		
 	}
 
 	@Override
 	public int getAvgPrice() {
 		
-		//int result = 0;
-		int sum = 0;
 		
-		for(int i = 0; i<bList.size();i++) {
-			sum += bList.get(i).getPrice();
-			sum++;
-		}
 		
-		return sum/bList.size();
+		return getTotalPrice()/bList.size();
 	}
 	
 

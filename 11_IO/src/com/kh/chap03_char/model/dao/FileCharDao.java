@@ -75,10 +75,6 @@ public class FileCharDao {
 			}
 			
 			
-			
-			
-			
-			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

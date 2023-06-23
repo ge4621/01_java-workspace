@@ -170,10 +170,10 @@ public class MusicMenu {
 		
 		int result = mc.updateMusic(title,upArtist,upTitle);
 		
-		if(result>0) {
+		if(result==1) {
 			System.out.println("성공적으로 수정");
 			selectMusic();
-		}else {
+		}else if(result == 0){
 			System.out.println("수정값을 찾지 못했습니다.");
 		}
 		

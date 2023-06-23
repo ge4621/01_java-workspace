@@ -13,7 +13,6 @@ public class BookController implements BookManager  {
 	@Override
 	public void addBook(Book nBook) {
 		
-		
 		bList.add(nBook);
 		
 	}
@@ -21,21 +20,28 @@ public class BookController implements BookManager  {
 	@Override
 	public ArrayList<Book> getAllBook() {
 		
-		
 		return bList;
 	}
 
 	@Override
 	public Book searchBookBybNo(String bNo) {
 		
-		Book b = null;
+		Book b = null;  //책이 없음 
+		
+		/*
+		for(Book bo : bList) {
+			if(b.getbNo().equals(bNo)) {
+				b = bo;
+			}
+		}
+		*/  // 향상된 for문
 		
 		for(int i = 0; i<bList.size(); i++) {
 			if(bList.get(i).getbNo().equals(bNo)) {
 				b = bList.get(i);
 			}
 		}
-		return b;
+		return b;  
 	}
 
 	@Override
@@ -64,7 +70,9 @@ public class BookController implements BookManager  {
 	@Override
 	public ArrayList<Book> onlySearchBook() {
 		
+		
 		ArrayList<Book> tempB = new ArrayList<>();
+		
 		for(Book a :bList) {
 			if(a instanceof Magazine) {
 				continue;

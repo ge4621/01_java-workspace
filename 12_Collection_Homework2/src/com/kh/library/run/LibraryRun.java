@@ -7,9 +7,13 @@ import com.kh.library.controller.BookController;
 import com.kh.library.model.vo.Book;
 import com.kh.library.model.vo.Magazine;
 
-public class LibraryRun {
+public class LibraryRun { //실행용 클래스
 
-	public static void main(String[] args) {// 소장책 DB
+	public static void main(String[] args) {// 소장책 DB  //메인에 static가 있어 실행과 동시에 static에 다 올림.
+		
+		//LibraryRun r = new LibraryRun();
+		//r.printBooks(null);// 아래에서 static을 붙이기 싫으면 이걸 쓴다
+		
 		ArrayList<Book> bList = new ArrayList<>();
 
 	
@@ -25,7 +29,7 @@ public class LibraryRun {
 		bList.add(new Book("107", "민정이의 백만가지 요리레시피", "제주도에서 온 상원이", "우리반 출판사", 6300, "제주에서 밥해먹고 사는 일상"));
 		
 	
-		printBooks(bList);
+		printBooks(bList); //기울임이 있는 이유 : static키워드 있어서
 	}
 		
 
@@ -145,7 +149,7 @@ public class LibraryRun {
 				}
 				
 				if(result == 0) {
-					if(bkOrMaga.equals(true)){ // book
+					if(bkOrMaga.equals(true)){ // book  // 일반도서
 						bc.addBook(new Book(bNo, title, author, publisher, price, description)); 
 						
 					}else if (bkOrMaga.equals(false)) { //magazine
